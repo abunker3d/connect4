@@ -61,7 +61,7 @@ function makeHtmlBoard() {
 function findSpotForCol(x) {
   // TODO: write the real version of this, rather than always returning 0
   // for loop count down from <HEIGHT> minus 1
-  for (let y = (HEIGHT - 1); y > 0; y--) {
+  for (let y = (HEIGHT - 1); y >= 0; y--) {
     if (document.getElementById(`${y}-${x}`).innerHTML === "") {
       return y;
     }
