@@ -29,8 +29,10 @@ function makeBoard() {
 
 function makeHtmlBoard() {
   // TODO: get "htmlBoard" variable from the item in HTML w/ID of "board"
+  const htmlBoard = document.getElementById("board");
 
-  // TODO: add comment for this code
+  // create new table row and add <WIDTH> number of tds
+  // append the new table row to htmlBoard - this will be the top row
   const top = document.createElement("tr");
   top.setAttribute("id", "column-top");
   top.addEventListener("click", handleClick);
@@ -42,7 +44,7 @@ function makeHtmlBoard() {
   }
   htmlBoard.append(top);
 
-  // TODO: add comment for this code
+  // create <HEIGHT> number of rows filled with <WIDTH> number of tds
   for (let y = 0; y < HEIGHT; y++) {
     const row = document.createElement("tr");
     for (var x = 0; x < WIDTH; x++) {
